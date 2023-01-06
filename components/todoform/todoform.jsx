@@ -14,7 +14,9 @@ class TodoForm extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log("happening");
+    if (!this.state.description) {
+      return;
+    }
     this.props.dispatch(createTodo(this.state));
     this.setState({ id: "", description: "", isActive: false });
   };
@@ -22,7 +24,6 @@ class TodoForm extends Component {
     const { name, value } = e.target;
     this.setState({ ...this.state, description: value, id: uuidv4() });
   };
-
   render() {
     console.log(this.props.todoList);
     return (
