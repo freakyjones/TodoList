@@ -17,10 +17,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="bg-[#fff] ">
         <header>
-          <h1>TodoMatic</h1>
-          <h2>What needs to be done</h2>
+          <h1 className="text-[2.5rem] font-bold text-center text-blue">
+            TodoMatic
+          </h1>
+          <h2 className="text-center text-[1.5rem] mt-4 text-orange-400">
+            What needs to be done
+          </h2>
         </header>
         <TodoForm />
         <TodoFilter />
